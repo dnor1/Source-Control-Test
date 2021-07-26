@@ -18,6 +18,9 @@ view : Model -> Html Msg
 view model =
     div []
         [ h2 [] [ text "Counter app" ]
+        , button [ onClick Decrement ] [ text "-" ]
+        , text (String.fromInt model)
+        , button [ onClick Increment ] [ text "+" ]
         ]
 
 
